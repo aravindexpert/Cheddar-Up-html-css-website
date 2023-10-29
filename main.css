@@ -448,46 +448,58 @@ a img:hover {
   padding: 15px 60px;
   background-color: #007e97;
 }
-/* For screens smaller than 768px (typical for mobile devices) */
+/* For screens smaller than 768px (typical laptops) */
 @media (max-width: 768px) {
-  .top {
-    flex-direction: column;
+  .navleft {
+    max-width: 150px;
   }
-
-  .list {
-    flex-direction: column;
-  }
-
   .list li {
-    margin-right: 0;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-right: 10px;
   }
-
-  .list .btn {
-    margin-top: 10px;
+  .groups {
+    font-size: 40px;
   }
-
-  .text-overlay {
-    font-size: 18px;
-    left: 20px;
-  }
-
-  .left1 {
-    text-align: center;
-  }
-
-  .yellow {
-    width: 100%; /* Allow the image to take the full width */
-    height: auto;
-  }
-
-  .orange {
-    display: none; /* Hide the orange image on smaller screens */
-  }
-
-  .scroll {
-    display: none; /* Hide the scroll image on smaller screens */
-  }
-  
-  /* Add similar adjustments for other sections */
 }
+
+/* For screens smaller than 480px (smaller laptops and mobiles) */
+@media (max-width: 480px) {
+  .navleft {
+    max-width: 120px;
+  }
+  .list li {
+    font-size: 12px;
+    margin-right: 8px;
+  }
+  .groups {
+    font-size: 30px;
+  }
+  .content-card,
+  .content-card1,
+  .content-card2 {
+    flex-basis: 100%; /* Full width for cards on smaller screens */
+  }
+  .text-content,
+  .text-content2 {
+    left: 30px; /* Adjust text content position */
+    top: auto; /* Remove top position */
+  }
+  .text-box,
+  .text-box2,
+  .text-box3,
+  .text-box4,
+  .text-box5 {
+    width: 100%; /* Full width for text boxes */
+  }
+  .save, .Addtocart {
+    top: 10px; /* Adjust button position */
+    left: 20px; /* Adjust button position */
+  }
+  .groupbutton {
+    margin-left: 10px; /* Adjust button position */
+    margin-top: 10px; /* Adjust button position */
+  }
+}
+
+/* Additional media queries for larger screens can be added as needed */
+
